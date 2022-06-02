@@ -3,16 +3,16 @@
 {% block body %}
 <div class="w-4/5 m-auto pt-40">
     <h1 class="text-6xl text-center pb-12">
-        Create post
+        Edit blog post
     </h1>
 
     {{ form_start(form) }}
 
         {{ form_widget(form) }}
         
-        <button    
+        <button
             type="submit"
-            class="uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+            class="uppercase border border-blue-600 bg-white text-blue-700 text-lg mt-4 py-2 px-4 rounded transition transition-all hover:bg-blue-600 hover:text-white">
             Submit
         </button>
 

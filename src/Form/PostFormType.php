@@ -38,7 +38,14 @@ class PostFormType extends AbstractType
                 )
             ])
 
-            // ->add('date')
+            ->add('date', null, [
+                'widget' => 'single_text',
+                'attr' => array(
+                    'class' => 'bg-transparent block border-b-2 w-full h-10 text-2xl outline-none mb-7',
+                    'placeholder' => 'Enter a date and time'
+                ),
+                'label' => 'Posted at (date/ time)'
+            ])
 
             ->add('body', TextareaType::class, [
                 'attr' => array(
@@ -47,13 +54,6 @@ class PostFormType extends AbstractType
                 )
             ])
 
-            // ->add('imagePath', FileType::class, [
-            //     'attr' => array(
-            //         'class' => 'py-7'
-            //         // 'placeholder' => 'Enter the main body text of the blog post'
-            //     ),
-            //     'label' => false
-            // ])
             ->add('imagePath', FileType::class, array(
                 'required' => false,
                 'mapped' => false,

@@ -11,26 +11,19 @@
                 <h2 class="font-bold">
                    {{ post.author }} | {{ post.date|format_datetime('short', 'none', locale='fi') }}
                 </h2>
-
-                <p class="text-sm text-gray-600">
-                    {# {{ post.date }} #}
-                    4 min. read
-                </p>
             </div>
         </div>
 
         <img
             src="{{ post.imagePath }}"
             class="rounded-xl w-full shadow-xl"
-            alt="Icon of Code With Dary"
         />
 
         <p class="text-xl py-6">
             {{ post.body }}
         </p>
 
-        {# {% if app.user and post.userId == app.user.id %} #}
-            <a 
+            <a
                 href="/posts/edit/{{ post.id }}"
                 class="text-white border border-gray-600 bg-white text-gray-600 font-bold py-2 px-4 rounded transition-all hover:text-white hover:bg-gray-600">
                 Edit
@@ -41,6 +34,5 @@
                 class="text-white border border-red-600 text-red-600 font-bold py-2 px-4 ml-6 rounded transition-all hover:bg-red-600 hover:text-white">
                 Delete
             </a>
-        {# {% endif %} #}
     </div>
 {% endblock %}

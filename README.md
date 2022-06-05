@@ -9,7 +9,7 @@
 - Clone or copy into symfony-mamp and rename directory as "web"
 - Install dependencies with `composer install` and `npm install`
 - Point the project at [localhost:8007](http://localhost:8007)
-- Run the operations to create blog posts
+- Run the operations to create, review, update and delete blog posts
 
 ---
 
